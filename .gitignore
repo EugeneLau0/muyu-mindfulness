@@ -1,0 +1,49 @@
+# Xcode 项目文件
+*.xcodeproj/project.xcworkspace/
+
+# Xcode 设备支持文件
+*.xcappdata
+
+# Xcode 编译系统文件
+*.xcworkspacedata
+
+# Xcode 编译生成的文件
+*.o
+*.hmap
+*.pcm
+*.ipa
+*.dSYM
+
+# Xcode 缓存文件
+*.xccheckout
+
+# Xcode 临时文件
+*.xctempfiles
+
+# Xcode 备份文件
+*.xcodeproj/*.xcodeproj-backup
+
+# Xcode 旧的项目管理文件
+*.pbxuser
+*.pbxproj-backup
+
+# Xcode 旧的编译目录
+*.xcderiveddata
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/
+
+# Swift Package Manager
+*.xcp
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+
+# 其他可能的临时或缓存文件
+.DS_Store
+Thumbs.db
