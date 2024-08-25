@@ -14,6 +14,8 @@
 		E795D5C12C7ACE5700D3D8D9 /* muyu_mindfulnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5C02C7ACE5700D3D8D9 /* muyu_mindfulnessTests.swift */; };
 		E795D5CB2C7ACE5700D3D8D9 /* muyu_mindfulnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5CA2C7ACE5700D3D8D9 /* muyu_mindfulnessUITests.swift */; };
 		E795D5CD2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5CC2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift */; };
+		E795D5DE2C7B603800D3D8D9 /* sound_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E795D5DC2C7B603800D3D8D9 /* sound_1.wav */; };
+		E795D5DF2C7B603800D3D8D9 /* sound_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E795D5DD2C7B603800D3D8D9 /* sound_2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		E795D5C62C7ACE5700D3D8D9 /* muyu-mindfulnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "muyu-mindfulnessUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E795D5CA2C7ACE5700D3D8D9 /* muyu_mindfulnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muyu_mindfulnessUITests.swift; sourceTree = "<group>"; };
 		E795D5CC2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muyu_mindfulnessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E795D5DC2C7B603800D3D8D9 /* sound_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_1.wav; sourceTree = "<group>"; };
+		E795D5DD2C7B603800D3D8D9 /* sound_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		E795D5AE2C7ACE5200D3D8D9 /* muyu-mindfulness */ = {
 			isa = PBXGroup;
 			children = (
+				E795D5D92C7B502900D3D8D9 /* resources */,
 				E795D5AF2C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift */,
 				E795D5B12C7ACE5200D3D8D9 /* ContentView.swift */,
 				E795D5B32C7ACE5600D3D8D9 /* Assets.xcassets */,
@@ -125,6 +130,15 @@
 				E795D5CC2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift */,
 			);
 			path = "muyu-mindfulnessUITests";
+			sourceTree = "<group>";
+		};
+		E795D5D92C7B502900D3D8D9 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				E795D5DC2C7B603800D3D8D9 /* sound_1.wav */,
+				E795D5DD2C7B603800D3D8D9 /* sound_2.mp3 */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +247,8 @@
 			files = (
 				E795D5B72C7ACE5600D3D8D9 /* Preview Assets.xcassets in Resources */,
 				E795D5B42C7ACE5600D3D8D9 /* Assets.xcassets in Resources */,
+				E795D5DE2C7B603800D3D8D9 /* sound_1.wav in Resources */,
+				E795D5DF2C7B603800D3D8D9 /* sound_2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
