@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E795D5B02C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5AF2C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift */; };
+		E795D5B22C7ACE5200D3D8D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5B12C7ACE5200D3D8D9 /* ContentView.swift */; };
+		E795D5B42C7ACE5600D3D8D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E795D5B32C7ACE5600D3D8D9 /* Assets.xcassets */; };
+		E795D5B72C7ACE5600D3D8D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E795D5B62C7ACE5600D3D8D9 /* Preview Assets.xcassets */; };
+		E795D5C12C7ACE5700D3D8D9 /* muyu_mindfulnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5C02C7ACE5700D3D8D9 /* muyu_mindfulnessTests.swift */; };
+		E795D5CB2C7ACE5700D3D8D9 /* muyu_mindfulnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5CA2C7ACE5700D3D8D9 /* muyu_mindfulnessUITests.swift */; };
+		E795D5CD2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5CC2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E795D5BD2C7ACE5700D3D8D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E795D5A42C7ACE5100D3D8D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E795D5AB2C7ACE5200D3D8D9;
+			remoteInfo = "muyu-mindfulness";
+		};
+		E795D5C72C7ACE5700D3D8D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E795D5A42C7ACE5100D3D8D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E795D5AB2C7ACE5200D3D8D9;
+			remoteInfo = "muyu-mindfulness";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E795D5AC2C7ACE5200D3D8D9 /* muyu-mindfulness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "muyu-mindfulness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E795D5AF2C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muyu_mindfulnessApp.swift; sourceTree = "<group>"; };
+		E795D5B12C7ACE5200D3D8D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E795D5B32C7ACE5600D3D8D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E795D5B62C7ACE5600D3D8D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E795D5BC2C7ACE5700D3D8D9 /* muyu-mindfulnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "muyu-mindfulnessTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E795D5C02C7ACE5700D3D8D9 /* muyu_mindfulnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muyu_mindfulnessTests.swift; sourceTree = "<group>"; };
+		E795D5C62C7ACE5700D3D8D9 /* muyu-mindfulnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "muyu-mindfulnessUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E795D5CA2C7ACE5700D3D8D9 /* muyu_mindfulnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muyu_mindfulnessUITests.swift; sourceTree = "<group>"; };
+		E795D5CC2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muyu_mindfulnessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E795D5A92C7ACE5200D3D8D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E795D5B92C7ACE5700D3D8D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E795D5C32C7ACE5700D3D8D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E795D5A32C7ACE5100D3D8D9 = {
+			isa = PBXGroup;
+			children = (
+				E795D5AE2C7ACE5200D3D8D9 /* muyu-mindfulness */,
+				E795D5BF2C7ACE5700D3D8D9 /* muyu-mindfulnessTests */,
+				E795D5C92C7ACE5700D3D8D9 /* muyu-mindfulnessUITests */,
+				E795D5AD2C7ACE5200D3D8D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E795D5AD2C7ACE5200D3D8D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E795D5AC2C7ACE5200D3D8D9 /* muyu-mindfulness.app */,
+				E795D5BC2C7ACE5700D3D8D9 /* muyu-mindfulnessTests.xctest */,
+				E795D5C62C7ACE5700D3D8D9 /* muyu-mindfulnessUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E795D5AE2C7ACE5200D3D8D9 /* muyu-mindfulness */ = {
+			isa = PBXGroup;
+			children = (
+				E795D5AF2C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift */,
+				E795D5B12C7ACE5200D3D8D9 /* ContentView.swift */,
+				E795D5B32C7ACE5600D3D8D9 /* Assets.xcassets */,
+				E795D5B52C7ACE5600D3D8D9 /* Preview Content */,
+			);
+			path = "muyu-mindfulness";
+			sourceTree = "<group>";
+		};
+		E795D5B52C7ACE5600D3D8D9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E795D5B62C7ACE5600D3D8D9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E795D5BF2C7ACE5700D3D8D9 /* muyu-mindfulnessTests */ = {
+			isa = PBXGroup;
+			children = (
+				E795D5C02C7ACE5700D3D8D9 /* muyu_mindfulnessTests.swift */,
+			);
+			path = "muyu-mindfulnessTests";
+			sourceTree = "<group>";
+		};
+		E795D5C92C7ACE5700D3D8D9 /* muyu-mindfulnessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E795D5CA2C7ACE5700D3D8D9 /* muyu_mindfulnessUITests.swift */,
+				E795D5CC2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift */,
+			);
+			path = "muyu-mindfulnessUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E795D5AB2C7ACE5200D3D8D9 /* muyu-mindfulness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E795D5D02C7ACE5700D3D8D9 /* Build configuration list for PBXNativeTarget "muyu-mindfulness" */;
+			buildPhases = (
+				E795D5A82C7ACE5200D3D8D9 /* Sources */,
+				E795D5A92C7ACE5200D3D8D9 /* Frameworks */,
+				E795D5AA2C7ACE5200D3D8D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "muyu-mindfulness";
+			productName = "muyu-mindfulness";
+			productReference = E795D5AC2C7ACE5200D3D8D9 /* muyu-mindfulness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E795D5BB2C7ACE5700D3D8D9 /* muyu-mindfulnessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E795D5D32C7ACE5700D3D8D9 /* Build configuration list for PBXNativeTarget "muyu-mindfulnessTests" */;
+			buildPhases = (
+				E795D5B82C7ACE5700D3D8D9 /* Sources */,
+				E795D5B92C7ACE5700D3D8D9 /* Frameworks */,
+				E795D5BA2C7ACE5700D3D8D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E795D5BE2C7ACE5700D3D8D9 /* PBXTargetDependency */,
+			);
+			name = "muyu-mindfulnessTests";
+			productName = "muyu-mindfulnessTests";
+			productReference = E795D5BC2C7ACE5700D3D8D9 /* muyu-mindfulnessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E795D5C52C7ACE5700D3D8D9 /* muyu-mindfulnessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E795D5D62C7ACE5700D3D8D9 /* Build configuration list for PBXNativeTarget "muyu-mindfulnessUITests" */;
+			buildPhases = (
+				E795D5C22C7ACE5700D3D8D9 /* Sources */,
+				E795D5C32C7ACE5700D3D8D9 /* Frameworks */,
+				E795D5C42C7ACE5700D3D8D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E795D5C82C7ACE5700D3D8D9 /* PBXTargetDependency */,
+			);
+			name = "muyu-mindfulnessUITests";
+			productName = "muyu-mindfulnessUITests";
+			productReference = E795D5C62C7ACE5700D3D8D9 /* muyu-mindfulnessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E795D5A42C7ACE5100D3D8D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					E795D5AB2C7ACE5200D3D8D9 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					E795D5BB2C7ACE5700D3D8D9 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = E795D5AB2C7ACE5200D3D8D9;
+					};
+					E795D5C52C7ACE5700D3D8D9 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = E795D5AB2C7ACE5200D3D8D9;
+					};
+				};
+			};
+			buildConfigurationList = E795D5A72C7ACE5100D3D8D9 /* Build configuration list for PBXProject "muyu-mindfulness" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E795D5A32C7ACE5100D3D8D9;
+			productRefGroup = E795D5AD2C7ACE5200D3D8D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E795D5AB2C7ACE5200D3D8D9 /* muyu-mindfulness */,
+				E795D5BB2C7ACE5700D3D8D9 /* muyu-mindfulnessTests */,
+				E795D5C52C7ACE5700D3D8D9 /* muyu-mindfulnessUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E795D5AA2C7ACE5200D3D8D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E795D5B72C7ACE5600D3D8D9 /* Preview Assets.xcassets in Resources */,
+				E795D5B42C7ACE5600D3D8D9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E795D5BA2C7ACE5700D3D8D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E795D5C42C7ACE5700D3D8D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E795D5A82C7ACE5200D3D8D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E795D5B22C7ACE5200D3D8D9 /* ContentView.swift in Sources */,
+				E795D5B02C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E795D5B82C7ACE5700D3D8D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E795D5C12C7ACE5700D3D8D9 /* muyu_mindfulnessTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E795D5C22C7ACE5700D3D8D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E795D5CB2C7ACE5700D3D8D9 /* muyu_mindfulnessUITests.swift in Sources */,
+				E795D5CD2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E795D5BE2C7ACE5700D3D8D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E795D5AB2C7ACE5200D3D8D9 /* muyu-mindfulness */;
+			targetProxy = E795D5BD2C7ACE5700D3D8D9 /* PBXContainerItemProxy */;
+		};
+		E795D5C82C7ACE5700D3D8D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E795D5AB2C7ACE5200D3D8D9 /* muyu-mindfulness */;
+			targetProxy = E795D5C72C7ACE5700D3D8D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E795D5CE2C7ACE5700D3D8D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E795D5CF2C7ACE5700D3D8D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E795D5D12C7ACE5700D3D8D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"muyu-mindfulness/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eugene.muyu-mindfulness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E795D5D22C7ACE5700D3D8D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"muyu-mindfulness/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eugene.muyu-mindfulness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E795D5D42C7ACE5700D3D8D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eugene.muyu-mindfulnessTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/muyu-mindfulness.app/muyu-mindfulness";
+			};
+			name = Debug;
+		};
+		E795D5D52C7ACE5700D3D8D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eugene.muyu-mindfulnessTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/muyu-mindfulness.app/muyu-mindfulness";
+			};
+			name = Release;
+		};
+		E795D5D72C7ACE5700D3D8D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eugene.muyu-mindfulnessUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "muyu-mindfulness";
+			};
+			name = Debug;
+		};
+		E795D5D82C7ACE5700D3D8D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eugene.muyu-mindfulnessUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "muyu-mindfulness";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E795D5A72C7ACE5100D3D8D9 /* Build configuration list for PBXProject "muyu-mindfulness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E795D5CE2C7ACE5700D3D8D9 /* Debug */,
+				E795D5CF2C7ACE5700D3D8D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E795D5D02C7ACE5700D3D8D9 /* Build configuration list for PBXNativeTarget "muyu-mindfulness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E795D5D12C7ACE5700D3D8D9 /* Debug */,
+				E795D5D22C7ACE5700D3D8D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E795D5D32C7ACE5700D3D8D9 /* Build configuration list for PBXNativeTarget "muyu-mindfulnessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E795D5D42C7ACE5700D3D8D9 /* Debug */,
+				E795D5D52C7ACE5700D3D8D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E795D5D62C7ACE5700D3D8D9 /* Build configuration list for PBXNativeTarget "muyu-mindfulnessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E795D5D72C7ACE5700D3D8D9 /* Debug */,
+				E795D5D82C7ACE5700D3D8D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E795D5A42C7ACE5100D3D8D9 /* Project object */;
+}
