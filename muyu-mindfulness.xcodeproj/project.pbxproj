@@ -16,6 +16,7 @@
 		E795D5CD2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5CC2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift */; };
 		E795D5DE2C7B603800D3D8D9 /* sound_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E795D5DC2C7B603800D3D8D9 /* sound_1.wav */; };
 		E795D5DF2C7B603800D3D8D9 /* sound_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E795D5DD2C7B603800D3D8D9 /* sound_2.mp3 */; };
+		E795D5E12C7C38D700D3D8D9 /* mulv.png in Resources */ = {isa = PBXBuildFile; fileRef = E795D5E02C7C38D700D3D8D9 /* mulv.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E795D5CC2C7ACE5700D3D8D9 /* muyu_mindfulnessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muyu_mindfulnessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E795D5DC2C7B603800D3D8D9 /* sound_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_1.wav; sourceTree = "<group>"; };
 		E795D5DD2C7B603800D3D8D9 /* sound_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_2.mp3; sourceTree = "<group>"; };
+		E795D5E02C7C38D700D3D8D9 /* mulv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mulv.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		E795D5D92C7B502900D3D8D9 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				E795D5E02C7C38D700D3D8D9 /* mulv.png */,
 				E795D5DC2C7B603800D3D8D9 /* sound_1.wav */,
 				E795D5DD2C7B603800D3D8D9 /* sound_2.mp3 */,
 			);
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E795D5B72C7ACE5600D3D8D9 /* Preview Assets.xcassets in Resources */,
+				E795D5E12C7C38D700D3D8D9 /* mulv.png in Resources */,
 				E795D5B42C7ACE5600D3D8D9 /* Assets.xcassets in Resources */,
 				E795D5DE2C7B603800D3D8D9 /* sound_1.wav in Resources */,
 				E795D5DF2C7B603800D3D8D9 /* sound_2.mp3 in Resources */,

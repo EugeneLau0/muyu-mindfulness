@@ -24,16 +24,17 @@ struct ContentView: View {
     var body: some View {
         VStack {
             // 显示计数器的标签
-            Text("计数: \(counter)").font(.largeTitle)
-            Spacer()
+            Text("\u{2665}  \(counter)").font(.largeTitle)
+            
             // 创建一个按钮，点击时调用incrementCounter函数
             Button(action: {
                 // 每次点击，计数器增加1
                 self.incrementCounter()
                 // 播放声音
                 self.playSound()
-            }) {
-                Text("敲我敲我").fontWeight(.bold).font(.title)
+            })
+            {
+                Text("功德+1").fontWeight(.bold).font(.title)
             }
             .padding()
             .foregroundColor(.white)
@@ -45,21 +46,7 @@ struct ContentView: View {
         }.onDisappear {
             audioPlayer?.stop()
             audioPlayer = nil
-        }.frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            // 添加一个透明的覆盖层来检测点击
-            GeometryReader { geometryProxy in
-                Color.clear
-                    .opacity(0) // 设置透明度为0，使其不影响视觉效果
-                    .edgesIgnoringSafeArea(.all) // 确保覆盖包括安全区域在内的整个屏幕
-                    .onTapGesture {
-                        // 整个屏幕的点击事件处理
-                        print("屏幕被点击")
-                        self.incrementCounter()
-                        self.playSound()
-                    }
-            }
-        )
+        }
     }
     
     // 定义一个函数，用于增加计数器的值
