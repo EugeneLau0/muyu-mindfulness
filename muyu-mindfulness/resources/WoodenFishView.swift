@@ -19,10 +19,11 @@ struct WoodenFishView: View {
                     .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 5)
                 
                 // 木鱼图像
-                Image("woodenFish") // 确保您有这个图片资源
+                Image(systemName: "seal.fill")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
+                    .foregroundColor(.orange) // 你可以选择任何适合的颜色
                     .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
                     .scaleEffect(isAnimating ? 1.1 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.3, blendDuration: 0.3), value: isAnimating)

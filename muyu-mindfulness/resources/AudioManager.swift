@@ -43,10 +43,10 @@ class AudioManager: ObservableObject {
             return
         }
         
-//        if player.play() {
+        if player.play() {
 //            print("开始播放音频")
-//        } else {
-//            print("播放音频失败")
-//        }
+        } else {
+            print("播放音频失败")
+        }
     }
 }
