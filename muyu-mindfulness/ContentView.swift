@@ -22,13 +22,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             WoodenFishView(audioManager: audioManager, userDefaultsManager: userDefaultsManager)
-                .navigationBarItems(trailing: Button("设置") {
+                .navigationBarItems(trailing: Button(action: {
                     showSettings.toggle()
+                }) {
+                    Image(systemName: "gearshape")
+                        .foregroundColor(.white)
                 })
-                .sheet(isPresented: $showSettings) {
-                    SettingsView(userDefaultsManager: userDefaultsManager)
-                }
+                .navigationBarTitle("", displayMode: .inline)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             audioManager.prepareSound()
             userDefaultsManager.checkAndResetDailyCount()
