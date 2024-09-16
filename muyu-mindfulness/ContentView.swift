@@ -14,16 +14,11 @@ struct ContentView: View {
     @ObservedObject var userDefaultsManager: UserDefaultsManager
     @State private var showSettings = false
 
-    init(audioManager: AudioManager, userDefaultsManager: UserDefaultsManager) {
-        self.audioManager = audioManager
-        self.userDefaultsManager = userDefaultsManager
-    }
-
     var body: some View {
         NavigationView {
             WoodenFishView(audioManager: audioManager, userDefaultsManager: userDefaultsManager)
                 .navigationBarItems(trailing: Button(action: {
-                    showSettings.toggle()
+                    showSettings = true
                 }) {
                     Image(systemName: "gearshape")
                         .foregroundColor(.white)
@@ -31,9 +26,8 @@ struct ContentView: View {
                 .navigationBarTitle("", displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .onAppear {
-            audioManager.prepareSound()
-            userDefaultsManager.checkAndResetDailyCount()
+        .sheet(isPresented: $showSettings) {
+            SettingsView(userDefaultsManager: userDefaultsManager)
         }
     }
 }
