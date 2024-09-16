@@ -6,6 +6,7 @@ struct SettingsView: View {
     @State private var tempDailyGoal: String = ""
     @State private var isCustomGoal: Bool = false
     @State private var showingResetAlert = false
+    @State private var showingStatistics = false
     @Environment(\.presentationMode) var presentationMode
 
     let presetGoals = [100, 500, 1000]
@@ -47,18 +48,28 @@ struct SettingsView: View {
                     }
                 }
 
+                Section(header: Text("统计")) {
+                    Button("查看功德统计") {
+                        showingStatistics = true
+                    }
+                }
+
                 Section(header: Text("重置")) {
                     Button("重置所有设置和数据") {
                         showingResetAlert = true
                     }
                     .foregroundColor(.red)
                 }
+                
             }
             .navigationBarTitle("设置", displayMode: .inline)
             .navigationBarItems(trailing: Button("完成") {
                 saveSettings()
                 presentationMode.wrappedValue.dismiss()
             })
+            .sheet(isPresented: $showingStatistics) {
+                StatisticsView(userDefaultsManager: userDefaultsManager)
+            }
             .alert(isPresented: $showingResetAlert) {
                 Alert(
                     title: Text("确认重置"),

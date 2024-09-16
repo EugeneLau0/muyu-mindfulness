@@ -34,9 +34,34 @@ class UserDefaultsManager: ObservableObject {
         }
     }
 
+    private let dailyCountsKey = "dailyCounts"
+
+    func saveDailyCount() {
+        let today = Calendar.current.startOfDay(for: Date())
+        var dailyCounts = UserDefaults.standard.dictionary(forKey: dailyCountsKey) as? [String: Int] ?? [:]
+        dailyCounts[dateFormatter.string(from: today)] = todayCount
+        UserDefaults.standard.set(dailyCounts, forKey: dailyCountsKey)
+    }
+
+    func getDailyCounts() -> [(date: Date, count: Int)] {
+        let dailyCounts = UserDefaults.standard.dictionary(forKey: dailyCountsKey) as? [String: Int] ?? [:]
+        return dailyCounts.compactMap { (dateString, count) in
+            guard let date = dateFormatter.date(from: dateString) else { return nil }
+            return (date, count)
+        }.sorted { $0.date > $1.date }
+    }
+
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+
     func incrementCounter() {
-        todayCount += 1
         totalCount += 1
+        todayCount += 1
+        saveDailyCount()
+        objectWillChange.send()
     }
 
     func checkAndResetDailyCount() {
