@@ -4,7 +4,10 @@ struct SettingsView: View {
     @ObservedObject var audioManager: AudioManager
     @ObservedObject var userDefaultsManager: UserDefaultsManager
     @State private var tempDailyGoal: String = ""
+    @State private var isCustomGoal: Bool = false
     @Environment(\.presentationMode) var presentationMode
+
+    let presetGoals = [100, 500, 1000]
 
     var body: some View {
         NavigationView {
@@ -18,10 +21,28 @@ struct SettingsView: View {
                 }
 
                 Section(header: Text("每日目标")) {
-                    HStack {
-                        Text("每日目标:")
-                        TextField("输入目标", text: $tempDailyGoal)
-                            .keyboardType(.numberPad)
+                    Picker("选择目标", selection: $isCustomGoal) {
+                        Text("预设目标").tag(false)
+                        Text("自定义目标").tag(true)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+
+                    if !isCustomGoal {
+                        Picker("预设目标", selection: Binding(
+                            get: { self.presetGoals.firstIndex(of: self.userDefaultsManager.dailyGoal) ?? 0 },
+                            set: { self.userDefaultsManager.dailyGoal = self.presetGoals[$0] }
+                        )) {
+                            ForEach(0..<presetGoals.count) { index in
+                                Text("\(self.presetGoals[index])").tag(index)
+                            }
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                    } else {
+                        HStack {
+                            Text("自定义目标:")
+                            TextField("输入目标", text: $tempDailyGoal)
+                                .keyboardType(.numberPad)
+                        }
                     }
                 }
             }
@@ -32,6 +53,7 @@ struct SettingsView: View {
             })
         }
         .onAppear {
+            isCustomGoal = !presetGoals.contains(userDefaultsManager.dailyGoal)
             tempDailyGoal = "\(userDefaultsManager.dailyGoal)"
         }
         .onDisappear {
@@ -40,9 +62,11 @@ struct SettingsView: View {
     }
 
     private func saveSettings() {
-        if let newGoal = Int(tempDailyGoal), newGoal > 0 {
-            userDefaultsManager.dailyGoal = newGoal
+        if isCustomGoal {
+            if let newGoal = Int(tempDailyGoal), newGoal > 0 {
+                userDefaultsManager.dailyGoal = newGoal
+            }
         }
-        // 音量设置已经通过 Slider 的绑定自动保存了
+        // 预设目标和音量设置已经通过 Picker 和 Slider 的绑定自动保存了
     }
 }
