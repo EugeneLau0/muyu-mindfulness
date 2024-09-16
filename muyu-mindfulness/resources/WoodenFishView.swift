@@ -11,7 +11,7 @@ struct WoodenFishView: View {
             LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.3), Color.purple.opacity(0.3)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 30) {
+            VStack(spacing: 40) {
                 // 标题
                 Text("木鱼禅修")
                     .font(.system(size: 36, weight: .bold, design: .rounded))
@@ -22,8 +22,8 @@ struct WoodenFishView: View {
                 Image(systemName: "seal.fill")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200, height: 200)
-                    .foregroundColor(.orange) // 你可以选择任何适合的颜色
+                    .frame(width: 180, height: 180)
+                    .foregroundColor(.orange)
                     .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
                     .scaleEffect(isAnimating ? 1.1 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.3, blendDuration: 0.3), value: isAnimating)
@@ -45,13 +45,16 @@ struct WoodenFishView: View {
                 }) {
                     Text("功德+1")
                         .fontWeight(.bold)
-                        .font(.title2)
-                        .padding()
+                        .font(.system(size: 28))
+                        .padding(.vertical, 20)
+                        .padding(.horizontal, 40)
                         .background(Color.white)
                         .foregroundColor(.blue)
                         .clipShape(Capsule())
-                        .shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 5)
+                        .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 5)
                 }
+                .scaleEffect(isAnimating ? 0.95 : 1.0)
+                .animation(.spring(response: 0.3, dampingFraction: 0.3, blendDuration: 0.3), value: isAnimating)
                 
                 // 统计信息
                 VStack(spacing: 10) {
