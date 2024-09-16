@@ -21,6 +21,18 @@ class UserDefaultsManager: ObservableObject {
             UserDefaults.standard.set(lastSavedDate, forKey: "lastSavedDate")
         }
     }
+    @Published var soundVolume: Double {
+        didSet {
+            UserDefaults.standard.set(soundVolume, forKey: "soundVolume")
+        }
+    }
+
+    init() {
+        self.soundVolume = UserDefaults.standard.double(forKey: "soundVolume")
+        if self.soundVolume == 0 {
+            self.soundVolume = 1.0 // 默认音量为最大
+        }
+    }
 
     func incrementCounter() {
         todayCount += 1
