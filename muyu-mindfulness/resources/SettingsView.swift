@@ -5,6 +5,7 @@ struct SettingsView: View {
     @ObservedObject var userDefaultsManager: UserDefaultsManager
     @State private var tempDailyGoal: String = ""
     @State private var isCustomGoal: Bool = false
+    @State private var showingResetAlert = false
     @Environment(\.presentationMode) var presentationMode
 
     let presetGoals = [100, 500, 1000]
@@ -45,12 +46,29 @@ struct SettingsView: View {
                         }
                     }
                 }
+
+                Section(header: Text("重置")) {
+                    Button("重置所有设置和数据") {
+                        showingResetAlert = true
+                    }
+                    .foregroundColor(.red)
+                }
             }
             .navigationBarTitle("设置", displayMode: .inline)
             .navigationBarItems(trailing: Button("完成") {
                 saveSettings()
                 presentationMode.wrappedValue.dismiss()
             })
+            .alert(isPresented: $showingResetAlert) {
+                Alert(
+                    title: Text("确认重置"),
+                    message: Text("这将重置所有设置和数据到初始状态。此操作不可撤销。"),
+                    primaryButton: .destructive(Text("重置")) {
+                        resetAllSettings()
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
         }
         .onAppear {
             isCustomGoal = !presetGoals.contains(userDefaultsManager.dailyGoal)
@@ -68,5 +86,13 @@ struct SettingsView: View {
             }
         }
         // 预设目标和音量设置已经通过 Picker 和 Slider 的绑定自动保存了
+    }
+
+    private func resetAllSettings() {
+        userDefaultsManager.resetAllData()
+        audioManager.resetToDefaults()
+        isCustomGoal = false
+        tempDailyGoal = "100" // 假设100是默认的每日目标
+        presentationMode.wrappedValue.dismiss()
     }
 }

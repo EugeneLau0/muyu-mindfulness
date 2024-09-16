@@ -49,4 +49,9 @@ class AudioManager: ObservableObject {
             print("播放音频失败")
         }
     }
+    
+    func resetToDefaults() {
+        volume = 1.0 // 默认音量
+        UserDefaults.standard.removeObject(forKey: "soundVolume")
+    }
 }

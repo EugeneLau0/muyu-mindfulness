@@ -49,4 +49,16 @@ class UserDefaultsManager: ObservableObject {
             dailyGoal = 1
         }
     }
+
+    func resetAllData() {
+        totalCount = 0
+        todayCount = 0
+        dailyGoal = 100 // 默认目标
+        lastSavedDate = Date()
+        
+        UserDefaults.standard.removeObject(forKey: "totalCount")
+        UserDefaults.standard.removeObject(forKey: "todayCount")
+        UserDefaults.standard.removeObject(forKey: "dailyGoal")
+        UserDefaults.standard.removeObject(forKey: "lastSavedDate")
+    }
 }
