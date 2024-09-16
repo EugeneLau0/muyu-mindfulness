@@ -27,7 +27,7 @@ struct ContentView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: $showSettings) {
-            SettingsView(userDefaultsManager: userDefaultsManager)
+            SettingsView(audioManager: audioManager, userDefaultsManager: userDefaultsManager)
         }
         .onAppear {
             
