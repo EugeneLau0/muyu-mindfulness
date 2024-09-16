@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70898312C9801BA006251F6 /* WoodenFishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E708982D2C9801BA006251F6 /* WoodenFishView.swift */; };
+		E70898322C9801BA006251F6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E708982E2C9801BA006251F6 /* UserDefaultsManager.swift */; };
+		E70898332C9801BA006251F6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E708982F2C9801BA006251F6 /* SettingsView.swift */; };
+		E70898342C9801BA006251F6 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70898302C9801BA006251F6 /* AudioManager.swift */; };
 		E795D5B02C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5AF2C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift */; };
 		E795D5B22C7ACE5200D3D8D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795D5B12C7ACE5200D3D8D9 /* ContentView.swift */; };
 		E795D5B42C7ACE5600D3D8D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E795D5B32C7ACE5600D3D8D9 /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E708982D2C9801BA006251F6 /* WoodenFishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoodenFishView.swift; sourceTree = "<group>"; };
+		E708982E2C9801BA006251F6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		E708982F2C9801BA006251F6 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E70898302C9801BA006251F6 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		E795D5AC2C7ACE5200D3D8D9 /* muyu-mindfulness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "muyu-mindfulness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E795D5AF2C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = muyu_mindfulnessApp.swift; sourceTree = "<group>"; };
 		E795D5B12C7ACE5200D3D8D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +145,10 @@
 		E795D5D92C7B502900D3D8D9 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				E70898302C9801BA006251F6 /* AudioManager.swift */,
+				E708982F2C9801BA006251F6 /* SettingsView.swift */,
+				E708982E2C9801BA006251F6 /* UserDefaultsManager.swift */,
+				E708982D2C9801BA006251F6 /* WoodenFishView.swift */,
 				E795D5E02C7C38D700D3D8D9 /* mulv.png */,
 				E795D5DC2C7B603800D3D8D9 /* sound_1.wav */,
 				E795D5DD2C7B603800D3D8D9 /* sound_2.mp3 */,
@@ -277,8 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70898342C9801BA006251F6 /* AudioManager.swift in Sources */,
+				E70898332C9801BA006251F6 /* SettingsView.swift in Sources */,
 				E795D5B22C7ACE5200D3D8D9 /* ContentView.swift in Sources */,
 				E795D5B02C7ACE5200D3D8D9 /* muyu_mindfulnessApp.swift in Sources */,
+				E70898322C9801BA006251F6 /* UserDefaultsManager.swift in Sources */,
+				E70898312C9801BA006251F6 /* WoodenFishView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

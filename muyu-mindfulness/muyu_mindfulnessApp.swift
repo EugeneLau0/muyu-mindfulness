@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct muyu_mindfulnessApp: App {
+    @StateObject private var audioManager = AudioManager()
+    @StateObject private var userDefaultsManager = UserDefaultsManager()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(audioManager: audioManager, userDefaultsManager: userDefaultsManager)
         }
     }
 }
