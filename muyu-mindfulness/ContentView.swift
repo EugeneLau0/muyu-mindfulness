@@ -29,6 +29,10 @@ struct ContentView: View {
         .sheet(isPresented: $showSettings) {
             SettingsView(userDefaultsManager: userDefaultsManager)
         }
+        .onAppear {
+            
+            userDefaultsManager.checkAndResetDailyCount()
+        }
     }
 }
 
