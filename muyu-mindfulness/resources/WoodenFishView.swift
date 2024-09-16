@@ -56,6 +56,7 @@ struct WoodenFishView: View {
                     }
                     .scaleEffect(isAnimating ? 0.95 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.3, blendDuration: 0.3), value: isAnimating)
+                    .keyboardShortcut(.space, modifiers: [])
                     
                     // 美化的数据区域
                     let statWidth = outerGeometry.size.width * 0.4
