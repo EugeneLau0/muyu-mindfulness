@@ -114,6 +114,7 @@ struct WoodenFishView: View {
             }
         }
         .onAppear {
+            userDefaultsManager.checkAndResetDailyCount()
             if userDefaultsManager.isAutoExecuteEnabled {
                 startAutoExecute()
             }

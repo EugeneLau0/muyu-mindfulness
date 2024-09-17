@@ -21,23 +21,9 @@ class UserDefaultsManager: ObservableObject {
             UserDefaults.standard.set(lastSavedDate, forKey: "lastSavedDate")
         }
     }
-    @Published var soundVolume: Double {
-        didSet {
-            UserDefaults.standard.set(soundVolume, forKey: "soundVolume")
-        }
-    }
-
-    @Published var isAutoExecuteEnabled: Bool {
-        didSet {
-            UserDefaults.standard.set(isAutoExecuteEnabled, forKey: "isAutoExecuteEnabled")
-        }
-    }
-
-    @Published var autoExecuteInterval: Double {
-        didSet {
-            UserDefaults.standard.set(autoExecuteInterval, forKey: "autoExecuteInterval")
-        }
-    }
+    @Published var soundVolume: Double
+    @Published var isAutoExecuteEnabled: Bool
+    @Published var autoExecuteInterval: Double
 
     init() {
         self.soundVolume = UserDefaults.standard.double(forKey: "soundVolume")
@@ -50,6 +36,11 @@ class UserDefaultsManager: ObservableObject {
         if self.autoExecuteInterval == 0 {
             self.autoExecuteInterval = 1.0 // 默认为1秒
         }
+        if self.dailyGoal == 0 {
+            self.dailyGoal = 100 // 默认目标
+        }
+        
+        checkAndResetDailyCount()
     }
 
     private let dailyCountsKey = "dailyCounts"
@@ -76,6 +67,7 @@ class UserDefaultsManager: ObservableObject {
     }()
 
     func incrementCounter() {
+        checkAndResetDailyCount() // 每次增加计数时检查是否需要重置
         totalCount += 1
         todayCount += 1
         saveDailyCount()
@@ -84,12 +76,13 @@ class UserDefaultsManager: ObservableObject {
 
     func checkAndResetDailyCount() {
         let calendar = Calendar.current
-        if !calendar.isDate(lastSavedDate, inSameDayAs: Date()) {
+        let today = calendar.startOfDay(for: Date())
+        let savedDate = calendar.startOfDay(for: lastSavedDate)
+        
+        if today != savedDate {
+            saveDailyCount() // 保存昨天的计数
             todayCount = 0
-            lastSavedDate = Date()
-        }
-        if dailyGoal < 1 {
-            dailyGoal = 1
+            lastSavedDate = today
         }
     }
 
@@ -103,5 +96,6 @@ class UserDefaultsManager: ObservableObject {
         UserDefaults.standard.removeObject(forKey: "todayCount")
         UserDefaults.standard.removeObject(forKey: "dailyGoal")
         UserDefaults.standard.removeObject(forKey: "lastSavedDate")
+        UserDefaults.standard.removeObject(forKey: dailyCountsKey)
     }
 }
