@@ -1,7 +1,7 @@
 import Foundation
 
 class UserDefaultsManager: ObservableObject {
-    @Published var totalCount: Int = UserDefaults.standard.integer(forKey: "totalCount") {
+    @Published var totalCount: Int {
         didSet {
             UserDefaults.standard.set(totalCount, forKey: "totalCount")
         }
@@ -29,6 +29,7 @@ class UserDefaultsManager: ObservableObject {
         self.soundVolume = UserDefaults.standard.double(forKey: "soundVolume")
         self.isAutoExecuteEnabled = UserDefaults.standard.bool(forKey: "isAutoExecuteEnabled")
         self.autoExecuteInterval = UserDefaults.standard.double(forKey: "autoExecuteInterval")
+        self.totalCount = UserDefaults.standard.integer(forKey: "totalCount")
         
         if self.soundVolume == 0 {
             self.soundVolume = 1.0 // 默认音量为最大
@@ -41,6 +42,7 @@ class UserDefaultsManager: ObservableObject {
         }
         
         checkAndResetDailyCount()
+        recalculateTotalCount()
     }
 
     private let dailyCountsKey = "dailyCounts"
@@ -84,6 +86,11 @@ class UserDefaultsManager: ObservableObject {
             todayCount = 0
             lastSavedDate = today
         }
+    }
+
+    func recalculateTotalCount() {
+        let dailyCounts = getDailyCounts()
+        totalCount = dailyCounts.reduce(0) { $0 + $1.count }
     }
 
     func resetAllData() {
