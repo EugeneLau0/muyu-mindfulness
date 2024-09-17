@@ -4,7 +4,8 @@ struct WoodenFishView: View {
     @ObservedObject var audioManager: AudioManager
     @ObservedObject var userDefaultsManager: UserDefaultsManager
     @State private var isAnimating = false
-    
+    @State private var timer: Timer?
+
     var body: some View {
         GeometryReader { outerGeometry in
             ZStack {
@@ -99,10 +100,45 @@ struct WoodenFishView: View {
                         .cornerRadius(15)
                     }
                     .frame(width: outerGeometry.size.width * 0.86)
+                    
+                    Toggle("自动功德", isOn: $userDefaultsManager.isAutoExecuteEnabled)
+                        .onChange(of: userDefaultsManager.isAutoExecuteEnabled) { newValue in
+                            if newValue {
+                                startAutoExecute()
+                            } else {
+                                stopAutoExecute()
+                            }
+                        }
                 }
                 .padding()
             }
         }
+        .onAppear {
+            if userDefaultsManager.isAutoExecuteEnabled {
+                startAutoExecute()
+            }
+        }
+        .onDisappear {
+            stopAutoExecute()
+        }
+    }
+
+    private func startAutoExecute() {
+        timer = Timer.scheduledTimer(withTimeInterval: userDefaultsManager.autoExecuteInterval, repeats: true) { _ in
+            userDefaultsManager.incrementCounter()
+            audioManager.playSound()
+            withAnimation {
+                isAnimating = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    isAnimating = false
+                }
+            }
+        }
+    }
+
+    private func stopAutoExecute() {
+        timer?.invalidate()
+        timer = nil
     }
 }
 

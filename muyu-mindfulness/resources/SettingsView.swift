@@ -7,6 +7,7 @@ struct SettingsView: View {
     @State private var isCustomGoal: Bool = false
     @State private var showingResetAlert = false
     @State private var showingStatistics = false
+    @State private var tempAutoExecuteInterval: String = ""
     @Environment(\.presentationMode) var presentationMode
 
     let presetGoals = [100, 500, 1000]
@@ -53,6 +54,18 @@ struct SettingsView: View {
                         showingStatistics = true
                     }
                 }
+                
+                Section(header: Text("自动功德设置")) {
+                    Toggle("启用自动功德", isOn: $userDefaultsManager.isAutoExecuteEnabled)
+                    
+                    if userDefaultsManager.isAutoExecuteEnabled {
+                        HStack {
+                            Text("时间间隔（秒）")
+                            TextField("输入时间间隔", text: $tempAutoExecuteInterval)
+                                .keyboardType(.decimalPad)
+                        }
+                    }
+                }
 
                 Section(header: Text("重置")) {
                     Button("重置所有设置和数据") {
@@ -84,6 +97,7 @@ struct SettingsView: View {
         .onAppear {
             isCustomGoal = !presetGoals.contains(userDefaultsManager.dailyGoal)
             tempDailyGoal = "\(userDefaultsManager.dailyGoal)"
+            tempAutoExecuteInterval = String(format: "%.1f", userDefaultsManager.autoExecuteInterval)
         }
         .onDisappear {
             saveSettings()
@@ -97,6 +111,10 @@ struct SettingsView: View {
             }
         }
         // 预设目标和音量设置已经通过 Picker 和 Slider 的绑定自动保存了
+
+        if let newInterval = Double(tempAutoExecuteInterval), newInterval > 0 {
+            userDefaultsManager.autoExecuteInterval = newInterval
+        }
     }
 
     private func resetAllSettings() {

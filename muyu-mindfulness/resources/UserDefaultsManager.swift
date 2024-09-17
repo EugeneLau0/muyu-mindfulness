@@ -27,10 +27,28 @@ class UserDefaultsManager: ObservableObject {
         }
     }
 
+    @Published var isAutoExecuteEnabled: Bool {
+        didSet {
+            UserDefaults.standard.set(isAutoExecuteEnabled, forKey: "isAutoExecuteEnabled")
+        }
+    }
+
+    @Published var autoExecuteInterval: Double {
+        didSet {
+            UserDefaults.standard.set(autoExecuteInterval, forKey: "autoExecuteInterval")
+        }
+    }
+
     init() {
         self.soundVolume = UserDefaults.standard.double(forKey: "soundVolume")
+        self.isAutoExecuteEnabled = UserDefaults.standard.bool(forKey: "isAutoExecuteEnabled")
+        self.autoExecuteInterval = UserDefaults.standard.double(forKey: "autoExecuteInterval")
+        
         if self.soundVolume == 0 {
             self.soundVolume = 1.0 // 默认音量为最大
+        }
+        if self.autoExecuteInterval == 0 {
+            self.autoExecuteInterval = 1.0 // 默认为1秒
         }
     }
 
