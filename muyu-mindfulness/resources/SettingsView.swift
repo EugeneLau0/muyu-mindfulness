@@ -35,7 +35,7 @@ struct SettingsView: View {
                             get: { self.presetGoals.firstIndex(of: self.userDefaultsManager.dailyGoal) ?? 0 },
                             set: { self.userDefaultsManager.dailyGoal = self.presetGoals[$0] }
                         )) {
-                            ForEach(0..<presetGoals.count) { index in
+                            ForEach(presetGoals.indices, id: \.self) { index in
                                 Text("\(self.presetGoals[index])").tag(index)
                             }
                         }
